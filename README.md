@@ -7,3 +7,7 @@ Single-page text editor application. Features a number of data persistence techn
 ## Screenshot
 
 ![Screenshot of text editor.](./screenshots/screenshot.png)
+
+## Link to Deployed Application
+
+https://obscure-hollows-73436-2ce9f831203a.herokuapp.com/
