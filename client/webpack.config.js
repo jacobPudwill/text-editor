@@ -18,7 +18,24 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // Webpack plugin that generates html file and injects bundles. 
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Text Editor'
+      }),
+      // Injects custom service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+      // Creates a manifest.json file.
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Text Editor',
+        start_url: './',
+        publicPath: './'
+      })
     ],
 
     module: {
